@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./main/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        viafont: ["ViaFont", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 }
