@@ -1,10 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ["./main/*.{html,js}"],
   theme: {
     extend: {
       fontFamily: {
-        viafont: ["ViaFont", "sans-serif"],
+        viafont: ["ViaFontru", "sans-serif"],
+        oi: ["Oi", ...defaultTheme.fontFamily.sans]
       },
     },
   },
