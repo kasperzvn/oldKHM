@@ -1,0 +1,37 @@
+.text-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+
+.text-wrapper p {
+    white-space: nowrap;
+    padding: 0 3rem;
+    letter-spacing: 1px;
+    animation: move-rtl 6000ms linear infinite;
+}
+
+.ltr p{
+    animation: move-ltr 6000ms linear infinite;
+    padding: 3 3rem;
+}
+
+
+@keyframes move-rtl {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes move-ltr {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
