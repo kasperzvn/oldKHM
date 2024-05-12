@@ -17,6 +17,30 @@
     padding: 3 3rem;
 }
 
+.shineeffect {
+    background-color: #fbbf24;
+    background-image: linear-gradient(
+        -75deg,
+        transparent 0,
+        transparent 5%,
+        rgba(255,255,255,0.5) 5%,
+        rgba(255,255,255,0.5) 10%,
+        transparent 10%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: 0.5s;
+}
+
+.offertext:hover {
+    .shineeffect {
+        background-position: -120% 0;
+
+    }
+}
 
 @keyframes move-rtl {
     0% {
