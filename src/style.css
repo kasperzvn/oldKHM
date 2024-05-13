@@ -1,3 +1,4 @@
+
 .text-wrapper {
     display: flex;
     justify-content: flex-start;
@@ -18,7 +19,7 @@
 }
 
 .shineeffect {
-    background-color: #fbbf24;
+    background-color: #f59e0b;
     background-image: linear-gradient(
         -75deg,
         transparent 0,
