@@ -12,7 +12,7 @@ module.exports = {
         1.5: "1.5px",
       },
       fontFamily: {
-        viafont: ["ViaFontru", "sans-serif"],
+        viafont: ["ViaFont", "sans-serif"],
         syne: ["Syne", ...defaultTheme.fontFamily.sans],
         anek: ["Anek Latin", ...defaultTheme.fontFamily.sans]
       },
@@ -21,7 +21,8 @@ module.exports = {
       },
       scale: {
         '103': '1.03',
-        '102': '1.02'
+        '102': '1.02',
+        '101': '1.01'
       }
     },
   },
