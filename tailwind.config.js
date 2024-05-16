@@ -10,6 +10,7 @@ module.exports = {
         3: "3px",
         2.5: "2.5px",
         1.5: "1.5px",
+        5.5: "5.5px",
       },
       fontFamily: {
         viafont: ["ViaFont", "sans-serif"],
@@ -23,7 +24,13 @@ module.exports = {
         '103': '1.03',
         '102': '1.02',
         '101': '1.01'
-      }
+      },
+      width: {
+        4.5: "1.125rem",
+      },
+      height: {
+        4.5: "1.125rem",
+      },
     },
   },
   plugins: [],
