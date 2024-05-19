@@ -18,7 +18,8 @@ module.exports = {
         anek: ["Anek Latin", ...defaultTheme.fontFamily.sans]
       },
       backgroundImage: {
-        "grid": "url(../fonts/grid.png)"
+        "grid": "url(../fonts/grid.png)",
+        "grid2": "url(../fonts/grid2.png)"
       },
       scale: {
         '103': '1.03',
