@@ -33,7 +33,7 @@
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    transition: 0.5s;
+    transition: 0.4s;
 }
 
 .offertext:hover {
