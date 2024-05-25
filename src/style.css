@@ -5,6 +5,9 @@
     overflow: hidden;
 }
 
+.textstroke {
+    -webkit-text-stroke: 4px navy
+}
 
 .text-wrapper p {
     white-space: nowrap;

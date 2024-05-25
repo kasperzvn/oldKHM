@@ -19,7 +19,8 @@ module.exports = {
       },
       backgroundImage: {
         "grid": "url(../fonts/grid.png)",
-        "grid2": "url(../fonts/grid2.png)"
+        "planks5": "url(../fonts/planks5.jpeg)",
+        "planks6": "url(../fonts/planks6.jpeg)",
       },
       scale: {
         '103': '1.03',
