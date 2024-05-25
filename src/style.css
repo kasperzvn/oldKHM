@@ -21,6 +21,10 @@
     padding: 3 3rem;
 }
 
+.customtextstroke {
+    text-shadow: -2.75px -2.75px 0 #1e293b, 2.75px -2.75px 0 #1e293b, -2.75px 2.75px 0 #1e293b, 2.75px 2.75px 0 #1e293b;
+}
+
 .shineeffect {
     background-color: #f59e0b;
     background-image: linear-gradient(
