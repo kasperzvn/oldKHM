@@ -5,6 +5,10 @@
     overflow: hidden;
 }
 
+#carousel.dragging {
+    cursor: grabbing;
+}
+
 
 .text-wrapper p {
     white-space: nowrap;
