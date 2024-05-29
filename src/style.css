@@ -5,10 +5,29 @@
     overflow: hidden;
 }
 
-#carousel.dragging {
-    cursor: grabbing;
+#outofframecard {
+    left: -309%
 }
 
+#leftcard {
+    left: -103%
+}
+
+#rightcard {
+    left: 103%
+}
+
+#farleftcard {
+    left: -206%
+}
+
+#farrightcard {
+    left: 206%
+}
+
+#centercard {
+    left: 0%;
+} 
 
 .text-wrapper p {
     white-space: nowrap;
