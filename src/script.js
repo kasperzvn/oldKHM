@@ -72,42 +72,158 @@ const carousel = document.getElementById('carousel')
 const buttonleft = document.getElementById('carousel_left')
 const buttonright = document.getElementById('carousel_right')
 
+var outofframediv = document.getElementById('outofframecard')
+var farleftdiv = document.getElementById('farleftcard')
+var leftdiv = document.getElementById('leftcard')
+var centerdiv = document.getElementById('centercard')
+var rightdiv = document.getElementById('rightcard')
+var farrightdiv = document.getElementById('farrightcard')
+
+
+
+console.log("hi")
+
+farleftdiv.style.left = "-206%"
+leftdiv.style.left = "-103%"
+centerdiv.style.left = "0%"
+rightdiv.style.left = "103%"
+farrightdiv.style.left = "206%"
+
+// outofframediv.style.backgroundColor = "#FF0000"
+// farleftdiv.style.backgroundColor = "#FF5600"
+// leftdiv.style.backgroundColor = "#FFFA00"
+// centerdiv.style.backgroundColor = "#00FA00"
+// rightdiv.style.backgroundColor = "#0000FF"
+// farrightdiv.style.backgroundColor = "#C000FF"
+
+
+let deb = false
+
 buttonright.onclick = function () {
-    let centerdiv = document.getElementById('centercard')
-    let rightdiv = document.getElementById('rightcard')
-    let leftdiv = document.getElementById('leftcard')
-    let farrightdiv = document.getElementById('farrightcard')
-    let farleftdiv = document.getElementById('farleftcard')
-    let outofframediv = document.getElementById('outofframecard')
+    if (deb == true) {
+        return
+    }
+    deb = true
 
+    outofframediv = document.getElementById('outofframecard')
+    farleftdiv = document.getElementById('farleftcard')
+    leftdiv = document.getElementById('leftcard')
+    centerdiv = document.getElementById('centercard')
+    rightdiv = document.getElementById('rightcard')
+    farrightdiv = document.getElementById('farrightcard')
 
-    // resetting
-    centerdiv.style.left = "0%"
-    rightdiv.style.left = "103%"
-    leftdiv.style.left = "-103%"
-    farrightdiv.style.left = "206%"
-    farleftdiv.style.left = "-206%"
     outofframediv.style.left = "-309%"
 
 
-    centerdiv.style.left = "103%"
-    centerdiv.id = "rightcard"
+    outofframediv.getElementsByTagName('img')[0].src = farrightdiv.getElementsByTagName('img')[0].src
 
-    leftdiv.style.left = "0%"
-    leftdiv.id = "centercard"
+    // setTimeout(() => {
+        outofframediv.style.left = "-206%"
+        farleftdiv.style.left = "-103%"
+        leftdiv.style.left = "0%"
+        centerdiv.style.left = "103%"
+        rightdiv.style.left = "206%"
+        farrightdiv.classList.remove("duration-500")
+        farrightdiv.style.left = "-309%"
+        setTimeout(() => {
+            farrightdiv.classList.add("duration-500")
+            deb = false
+        }, 500);
 
-    farleftdiv.style.left = "-103%"
-    farleftdiv.id = "leftcard"
+        outofframediv.id = "farleftcard"
+        farleftdiv.id = "leftcard"
+        leftdiv.id = "centercard"
+        centerdiv.id = "rightcard"
+        rightdiv.id = "farrightcard"
+        farrightdiv.id = "outofframecard"
 
-    outofframediv.style.left = "-206%"
-    outofframediv.id = "outofframecard"
+    // }, 1000);
 
-    rightdiv.style.left = "206%"
-    rightdiv.id = "farrightcard"
+    // outofframediv.getElementsByTagName('img')[0].src = farrightdiv.getElementsByTagName('img')[0].src
 
-    farrightdiv.style.left = "309%"
-    farrightdiv.id = "moving"
+    // outofframediv.style.left = "-206%"
+    // farleftdiv.style.left = "-103%"
+    // leftdiv.style.left = "0%"
+    // centerdiv.style.left = "103%"
+    // rightdiv.style.left = "206%"
+    // farrightdiv.style.left = "309%"
 
-    // clonediv.style.left = "-206%"
-    // clonediv.style.left.
+    // setTimeout(() => {
+    //     outofframediv.id = "farleftcard"
+    //     farleftdiv.id = "leftcard"
+    //     leftdiv.id = "centercard"
+    //     centerdiv.id = "rightcard"
+    //     rightdiv.id = "farrightcard"
+    //     farrightdiv.classList.add("hidden")
+    //     farrightdiv.left = "-309%"
+    //     farrightdiv.classList.remove("hidden")
+    //     farrightdiv.id = "outofframecard"
+    //     deb = false
+    // }, 500);
+
 }
+
+buttonleft.onclick = function () {
+    if (deb == true) {
+        return
+    }
+    deb = true
+
+    outofframediv = document.getElementById('outofframecard')
+    farleftdiv = document.getElementById('farleftcard')
+    leftdiv = document.getElementById('leftcard')
+    centerdiv = document.getElementById('centercard')
+    rightdiv = document.getElementById('rightcard')
+    farrightdiv = document.getElementById('farrightcard')
+
+    outofframediv.style.left = "309%"
+
+
+    outofframediv.getElementsByTagName('img')[0].src = farleftdiv.getElementsByTagName('img')[0].src
+
+    // setTimeout(() => {
+        outofframediv.style.left = "206%"
+        farleftdiv.classList.remove("duration-500")
+        farleftdiv.style.left = "-309%"
+        setTimeout(() => {
+            farleftdiv.classList.add("duration-500")
+            deb = false
+        }, 500);
+        leftdiv.style.left = "-206%"
+        centerdiv.style.left = "-103%"
+        rightdiv.style.left = "0%"
+        farrightdiv.style.left = "103%"
+
+        outofframediv.id = "farrightcard"
+        farleftdiv.id = "outofframecard"
+        leftdiv.id = "farleftcard"
+        centerdiv.id = "leftcard"
+        rightdiv.id = "centercard"
+        farrightdiv.id = "rightcard"
+
+    // }, 1000);
+
+    // outofframediv.getElementsByTagName('img')[0].src = farrightdiv.getElementsByTagName('img')[0].src
+
+    // outofframediv.style.left = "-206%"
+    // farleftdiv.style.left = "-103%"
+    // leftdiv.style.left = "0%"
+    // centerdiv.style.left = "103%"
+    // rightdiv.style.left = "206%"
+    // farrightdiv.style.left = "309%"
+
+    // setTimeout(() => {
+    //     outofframediv.id = "farleftcard"
+    //     farleftdiv.id = "leftcard"
+    //     leftdiv.id = "centercard"
+    //     centerdiv.id = "rightcard"
+    //     rightdiv.id = "farrightcard"
+    //     farrightdiv.classList.add("hidden")
+    //     farrightdiv.left = "-309%"
+    //     farrightdiv.classList.remove("hidden")
+    //     farrightdiv.id = "outofframecard"
+    //     deb = false
+    // }, 500);
+
+}
+
