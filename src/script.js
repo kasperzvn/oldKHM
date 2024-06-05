@@ -79,6 +79,31 @@ var rightdiv = document.getElementById('rightcard')
 var farrightdiv = document.getElementById('farrightcard')
 
 
+const frames = {outofframediv, farleftdiv, leftdiv, centerdiv, rightdiv, farrightdiv}
+const framesArray = Object.values(frames);
+
+for (let i = 0; i < 6; i++) {
+    const IndexFrame = framesArray[i]
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const observer = new MutationObserver((mutationsList) => {
+            for (let mutation of mutationsList) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'id') {
+                    if (mutation.target.id == "centercard") {
+                        mutation.target.classList.add("scale-[1.03]")
+                    } else {
+                        // mutation.target.classList.remove("transform-[105]")
+                    }
+                }
+            }
+        });
+
+        const config = { attributes: true, attributeFilter: ['id'] };
+        observer.observe(IndexFrame, config);
+    })
+
+}
+
 outofframediv.style.left = "309%"
 farleftdiv.style.left = "-206%"
 leftdiv.style.left = "-103%"
@@ -96,7 +121,7 @@ buttonleft.onclick = function () {
 
     outofframediv = document.getElementById('outofframecard')
 
-    outofframediv.classList.remove("duration-[400ms]")
+    outofframediv.classList.remove("duration-[200ms]")
     outofframediv.classList.remove("ease-out")
     outofframediv.style.left = "-309%"
 
@@ -107,6 +132,8 @@ buttonleft.onclick = function () {
     rightdiv = document.getElementById('rightcard')
     farrightdiv = document.getElementById('farrightcard')
 
+    centerdiv.classList.remove("scale-[1.03]")
+
     outofframediv.getElementsByTagName('img')[0].src = farrightdiv.getElementsByTagName('img')[0].src
 
     outofframediv.style.left = "-206%"
@@ -115,25 +142,27 @@ buttonleft.onclick = function () {
     centerdiv.style.left = "103%"
     rightdiv.style.left = "206%"
 
-    farrightdiv.classList.remove("duration-[400ms]")
+    farrightdiv.classList.remove("duration-[200ms]")
     farrightdiv.classList.remove("ease-out")
     farrightdiv.style.left = "309%"
     setTimeout(() => {
-        farrightdiv.classList.add("duration-[400ms]")
+        farrightdiv.classList.add("duration-[200ms]")
         farrightdiv.classList.add("ease-out")
 
-        outofframediv.classList.add("duration-[400ms]")
+        outofframediv.classList.add("duration-[200ms]")
         outofframediv.classList.add("ease-out")
 
-        deb = false
-    }, 400);
+        outofframediv.id = "farleftcard"
+        farleftdiv.id = "leftcard"
+        leftdiv.id = "centercard"
+        centerdiv.id = "rightcard"
+        rightdiv.id = "farrightcard"
+        farrightdiv.id = "outofframecard"
 
-    outofframediv.id = "farleftcard"
-    farleftdiv.id = "leftcard"
-    leftdiv.id = "centercard"
-    centerdiv.id = "rightcard"
-    rightdiv.id = "farrightcard"
-    farrightdiv.id = "outofframecard"
+        deb = false
+    }, 200);
+
+
 }
 
 buttonright.onclick = function () {
@@ -144,7 +173,7 @@ buttonright.onclick = function () {
 
     outofframediv = document.getElementById('outofframecard')
 
-    outofframediv.classList.remove("duration-[400ms]")
+    outofframediv.classList.remove("duration-[200ms]")
     outofframediv.classList.remove("ease-out")
     outofframediv.style.left = "309%"
 
@@ -154,6 +183,8 @@ buttonright.onclick = function () {
     rightdiv = document.getElementById('rightcard')
     farrightdiv = document.getElementById('farrightcard')
 
+    centerdiv.classList.remove("scale-[1.03]")
+
     outofframediv.getElementsByTagName('img')[0].src = farleftdiv.getElementsByTagName('img')[0].src
 
     outofframediv.style.left = "206%"
@@ -162,23 +193,25 @@ buttonright.onclick = function () {
     centerdiv.style.left = "-103%"
     leftdiv.style.left = "-206%"
 
-    farleftdiv.classList.remove("duration-[400ms]")
+    farleftdiv.classList.remove("duration-[200ms]")
     farleftdiv.classList.remove("ease-out")
     farleftdiv.style.left = "-309%"
     setTimeout(() => {
-        farleftdiv.classList.add("duration-[400ms]")
+        farleftdiv.classList.add("duration-[200ms]")
         farleftdiv.classList.add("ease-out")
 
-        outofframediv.classList.add("duration-[400ms]")
+        outofframediv.classList.add("duration-[200ms]")
         outofframediv.classList.add("ease-out")
 
-        deb = false
-    }, 400);
+        outofframediv.id = "farrightcard"
+        farrightdiv.id = "rightcard"
+        rightdiv.id = "centercard"
+        centerdiv.id = "leftcard"
+        leftdiv.id = "farleftcard"
+        farleftdiv.id = "outofframecard"
 
-    outofframediv.id = "farrightcard"
-    farrightdiv.id = "rightcard"
-    rightdiv.id = "centercard"
-    centerdiv.id = "leftcard"
-    leftdiv.id = "farleftcard"
-    farleftdiv.id = "outofframecard"
+        deb = false
+    }, 200);
+
+
 }

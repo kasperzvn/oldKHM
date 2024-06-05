@@ -22,11 +22,6 @@
     text-shadow: -2.75px -2.75px 0.75px #1e293b, 2.75px -2.75px 0.75px #1e293b, -2.75px 2.75px 0.75px #1e293b, 2.75px 2.75px 0.75px #1e293b;
 }
 
-.gradienttrans {
-    /* background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 80%, rgba(255,255,255,0.8534007352941176) 90%, rgba(255,255,255,0) 100%); */
-}
-
 .shineeffect {
     background-color: #f59e0b;
     background-image: linear-gradient(
