@@ -16,7 +16,8 @@ module.exports = {
         viafont: ["ViaFont", "sans-serif"],
         syne: ["Syne", ...defaultTheme.fontFamily.sans],
         anek: ["Anek Latin", ...defaultTheme.fontFamily.sans],
-        playfair: ["Playfair Display", ...defaultTheme.fontFamily.sans]
+        playfair: ["Playfair Display", ...defaultTheme.fontFamily.sans],
+        akshar: ["Akshar", ...defaultTheme.fontFamily.sans]
       },
       backgroundImage: {
         "grid": "url(../fonts/grid.png)",
