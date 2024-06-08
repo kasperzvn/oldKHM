@@ -22,6 +22,26 @@
     text-shadow: -2.75px -2.75px 0.75px #1e293b, 2.75px -2.75px 0.75px #1e293b, -2.75px 2.75px 0.75px #1e293b, 2.75px 2.75px 0.75px #1e293b;
 }
 
+.centercard {
+    scale: 1.04;
+}
+
+.centercard img {
+    opacity: 0.7;
+}
+.leftcard img {
+    opacity: 0.5;
+}
+.rightcard img {
+    opacity: 0.5;
+}
+.farleftcard img {
+    opacity: 0.5;
+}
+.farrightcard img {
+    opacity: 0.5;
+}
+
 .shineeffect {
     background-color: #f59e0b;
     background-image: linear-gradient(
