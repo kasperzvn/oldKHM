@@ -78,9 +78,13 @@ var centerdiv = document.getElementById('centercard')
 var rightdiv = document.getElementById('rightcard')
 var farrightdiv = document.getElementById('farrightcard')
 
-
 const frames = {outofframediv, farleftdiv, leftdiv, centerdiv, rightdiv, farrightdiv}
 const framesArray = Object.values(frames);
+
+const picturetoservice = {
+    "../fonts/slider1.jpg": "Service 1",
+
+}
 
 for (let i = 0; i < 6; i++) {
     const IndexFrame = framesArray[i]
@@ -135,6 +139,7 @@ buttonleft.onclick = function () {
     centerdiv.classList.remove("scale-[1.03]")
 
     outofframediv.getElementsByTagName('img')[0].src = farrightdiv.getElementsByTagName('img')[0].src
+    outofframediv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerText = ("Service " + farrightdiv.getElementsByTagName('img')[0].src.substring(15,16))
 
     outofframediv.style.left = "-206%"
     farleftdiv.style.left = "-103%"

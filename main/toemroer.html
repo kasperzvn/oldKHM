@@ -14,14 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap" rel="stylesheet">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
 
 
 </head>
 <body class="bg-gray-200 text-gray-200">
 
-    <nav class="w-full h-[45px] text-gray-800 hidden">
+    <!-- <nav class="w-full h-[45px] text-gray-800 hidden">
         <div class="w-full h-full flex">
             <div class="bg-red-50 w-1/5 h-full">
                 Logo
@@ -46,64 +44,90 @@
                 idk
             </div>
         </div>
-    </nav>
+    </nav> -->
 
     <div class="w-screen h-screen ">
 
-        <div class="relative w-full h-[280px] min-[735px]:h-1/2 overflow-clip bg-black border-gray-800 border-b-[4px] min-[735px]:flex min-[735px]:items-center grid ">
-            <!-- <p class="w-full text-6xl font-anek font-bold text-white z-20">Tømrørsiden</p> -->
-            <div class="relative z-10 w-full my-auto px-8 md:w-1/2 h-2/3 bg-slate-50  place-content-center">
-                <p class="font-semibold tracking-widest uppercase text-amber-600 bg-red-200">tømrør i aarhus</p>
-                <p class="font-semibold uppercase font-akshar text-4xl bg-yellow-500 h-auto flex items-center text-wrap">Lorem ipsum dolor sit</p>
-                <div class="text-gray-300 bg-green-500 truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-            </div>
-            <video autoplay loop muted class="absolute z-0 w-full outline-none min-[650px]:border-b-0 opacity-80">
+
+        <div class="w-full h-[40%] bg-black border-gray-800 border-b-[3px]">
+
+            <video autoplay loop muted class="relative w-full h-full object-cover opacity-80">
                 <source src="../fonts/house_showcase.mp4" type="video/mp4">
             </video>
-            <!-- <p class="bg-pink-600 relative z-20 py-auto">Hello</p> -->
+
+            <div class="absolute w-full md:w-1/2 xl:w-2/5 h-[40%] top-0 flex flex-col justify-center px-[20px]">
+                <p class="tracking-widest uppercase text-amber-600 text-medium font-bold">din lokale tømrør</p>
+                <p class="font-akshar uppercase text-4xl font-bold hyphens-manual" lang="da">Dansk tømrør&shy;service</p>
+                <p class="text-gray-300 line-clamp-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
         </div>
 
         <div class=" w-full h-2/3 content-center overflow-hidden">
 
             <div id="carousel" class="relative flex w-[85%] md:w-[55%] lg:w-[35%] h-[65%] mx-auto gap-x-4 justify-center">
 
-                <div class="w-[150%] h-[20%] absolute self-center my-auto z-[100]">
-                    <button id="carousel_left" class="relative h-full aspect-square float-left flex justify-center items-center hover:scale-105 duration-200 ease-out group">
-                        <svg class="w-full aspect-square fill-current text-sky-500 bg-gray-50/30 rounded-full group-hover:text-sky-700 ease-out duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>                    
+                <div class="w-[110%] h-[20%] absolute self-center my-auto z-[100]">
+                    <button id="carousel_left" class="relative h-full aspect-square float-left flex justify-center items-center rotate-180">
+                        <svg class="w-full h-full fill-current text-amber-600 hover:scale-[1.2] hover:text-amber-700 ease-out duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>                    
                     </button>
-                    <button id="carousel_right" class="relative h-full aspect-square float-right flex justify-center items-center hover:scale-105 duration-200 ease-out group">
-                        <svg class="w-full aspect-square fill-current text-sky-500 bg-gray-50/30 rounded-full group-hover:text-sky-700 ease-out duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>               
+                    <button id="carousel_right" class="relative h-full aspect-square float-right flex justify-center items-center rounded-full ease-out duration-[200ms]">
+                        <svg class="w-full h-full fill-current text-amber-600 hover:scale-[1.2] hover:text-amber-700 ease-out duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>               
                     </button>
                 </div>
 
                 <div id="outofframecard" class="bg-black border-gray-800 border-[4px] absolute w-full h-full flex-none duration-[200ms] ease-out">
                     <img src="../fonts/slider1.jpg" class="w-full h-full object-cover opacity-70">
+                    <div class="w-full h-[15%] absolute flex z-20 bg-gray-700 top-0 backdrop-filter backdrop-blur-lg border-gray-800 bg-opacity-[40%]">
+                        <p class="w-full px-[6px] my-auto font-bold text-2xl text-gray-300 ">
+                            Service 1
+                        </p>
+                    </div>
                 </div>
 
                 <div id="centercard" class="bg-black border-gray-800 border-[4px] relative w-full h-full scale-[1.03] flex-none duration-[200ms] ease-out">
                     <img src="../fonts/slider2.jpg" class="w-full h-full object-cover opacity-70">
                     <div class="w-full h-[15%] absolute flex z-20 bg-gray-700 top-0 backdrop-filter backdrop-blur-lg border-gray-800 bg-opacity-[40%]">
                         <p class="w-full px-[6px] my-auto font-bold text-2xl text-gray-300 ">
-                            Vinduer
+                            Service 2
                         </p>
                     </div>
                 </div>
 
                 <div id="leftcard" class="bg-black border-gray-800 border-[4px] absolute w-full h-full flex-none duration-[200ms] ease-out">
                     <img src="../fonts/slider3.jpg" class="w-full h-full object-cover opacity-70">
-                    
+                    <div class="w-full h-[15%] absolute flex z-20 bg-gray-700 top-0 backdrop-filter backdrop-blur-lg border-gray-800 bg-opacity-[40%]">
+                        <p class="w-full px-[6px] my-auto font-bold text-2xl text-gray-300 ">
+                            Service 3
+                        </p>
+                    </div>
                 </div>
 
                 <div id="rightcard" class="bg-black border-gray-800 border-[4px] absolute w-full h-full flex-none duration-[200ms] ease-out">
                     <img src="../fonts/slider4.jpg" class="w-full h-full object-cover opacity-70">
+                    <div class="w-full h-[15%] absolute flex z-20 bg-gray-700 top-0 backdrop-filter backdrop-blur-lg border-gray-800 bg-opacity-[40%]">
+                        <p class="w-full px-[6px] my-auto font-bold text-2xl text-gray-300 ">
+                            Service 4
+                        </p>
+                    </div>
                 </div>
 
                 <div id="farleftcard" class="bg-black border-gray-800 border-[4px] absolute w-full h-full flex-none duration-[200ms] ease-out">
                     <img src="../fonts/slider5.jpg" class="w-full h-full object-cover opacity-70">
+                    <div class="w-full h-[15%] absolute flex z-20 bg-gray-700 top-0 backdrop-filter backdrop-blur-lg border-gray-800 bg-opacity-[40%]">
+                        <p class="w-full px-[6px] my-auto font-bold text-2xl text-gray-300 ">
+                            Service 5
+                        </p>
+                    </div>
                 </div>
 
                 <div id="farrightcard" class="bg-black border-gray-800 border-[4px] absolute w-full h-full flex-none duration-[200ms] ease-out">
                     <img src="../fonts/slider1.jpg" class="w-full h-full object-cover opacity-70">
+                    <div class="w-full h-[15%] absolute flex z-20 bg-gray-700 top-0 backdrop-filter backdrop-blur-lg border-gray-800 bg-opacity-[40%]">
+                        <p class="w-full px-[6px] my-auto font-bold text-2xl text-gray-300 ">
+                            Service 1
+                        </p>
+                    </div>
                 </div>
 
             </div>
