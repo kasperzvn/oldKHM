@@ -71,6 +71,7 @@
     }
 }
 
+
 @keyframes move-rtl {
     0% {
         transform: translateX(0);

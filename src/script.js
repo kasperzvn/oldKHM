@@ -136,7 +136,7 @@ buttonleft.onclick = function () {
 
     outofframediv.getElementsByTagName('img')[0].src = farrightdiv.getElementsByTagName('img')[0].src
     // outofframediv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerText = ("Service " + farrightdiv.getElementsByTagName('img')[0].src.substring(15,16))
-    outofframediv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerText = farrightdiv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerText
+    outofframediv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerHTML = farrightdiv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerHTML
 
     outofframediv.style.left = "-206%"
     farleftdiv.style.left = "-103%"
@@ -209,7 +209,7 @@ buttonright.onclick = function () {
 
     outofframediv.getElementsByTagName('img')[0].src = farleftdiv.getElementsByTagName('img')[0].src
     // outofframediv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerText = ("Service " + farleftdiv.getElementsByTagName('img')[0].src.substring(15,16))
-    outofframediv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerText = farleftdiv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerText
+    outofframediv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerHTML = farleftdiv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerHTML
 
     outofframediv.style.left = "206%"
     farrightdiv.style.left = "103%"
