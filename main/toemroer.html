@@ -23,48 +23,49 @@
 
     <div class="w-screen h-screen overflow-x-hidden">
 
-        <div class="absolute z-[300] w-full h-full text-gray-800 hidden">
-            <div class="w-[85%] h-full bg-gray-400 float-right p-[20px] flex-col">
-                <div class="w-full h-[7.5%] bg-black/30 items-center inline-flex ">
-                    <p class="font-anek font-semibold text-2xl">Menu</p>
-                    <svg class="aspect-square h-[100%] ml-auto fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m256-168-88-88 224-224-224-224 88-88 224 224 224-224 88 88-224 224 224 224-88 88-224-224-224 224Z"/></svg>
-                </div>
-                <div class="h-[80%] bg-white/20 flex-col">
-                    <p>Hey</p>
-                    <p>Hey</p>
-                    <p>Hey</p>
+        <div class="w-screen h-screen absolute z-[300] text-gray-800 overflow-hidden" id="sliderparent">
+            <div class="w-full h-full relative">
 
+                <div id="blackoverlay" class="absolute w-full h-full bg-black z-[301] duration-[250ms] ease-out"></div>
+                
+               
+                <div id="slidermenu" class="absolute w-[85%] specialheight bottom-0 right-0 bg-gray-300 flex-col p-[35px] z-[302] ease-[cubic-bezier(0.25, 1, 0.5, 1)] duration-[250ms]">
+                    <div class="w-full h-[92%] flex-col ">
+                        <button class="w-full aspect-[4.5/1]">
+                            <p class="w-full text-left font-medium text-xl">Element 1</p>
+                        </button>
+                        <button class="w-full aspect-[4.5/1]">
+                            <p class="w-full text-left font-medium text-xl">Element 2</p>
+                        </button>
+                        <button class="w-full aspect-[4.5/1]">
+                            <p class="w-full text-left font-medium text-xl">Element 3</p>
+                        </button>
+                        <button class="w-full aspect-[4.5/1]">
+                            <p class="w-full text-left font-medium text-xl">Element 4</p>
+                        </button>
+                    </div>
                 </div>
+
             </div>
-
         </div>
 
-        <div class="w-full h-[45px] text-gray-800">
+        <div class="w-full h-[60px] text-gray-800 sticky top-0 bg-gray-200 z-[500] ">
             <div class="w-full h-full flex">
 
-                <div class="w-[80%] h-full inline-flex items-center gap-x-[6px] px-[12.5px] ">
+                <div class="w-[80%] h-full inline-flex items-center gap-x-[6px] px-[12.5px]">
                     <svg class="aspect-square h-[50%] fill-current text-amber-500" xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"><path d="M797-10q-12 0-23.5-4.5T753-28L529-252q-9-9-13.5-20.5T511-296q0-12 4.5-24t13.5-21l87-88q9-9 21-14t24-5q12 0 24 5t21 14l224 225q9 9 13.5 20.5T948-160q0 12-5 24t-14 21l-87 87q-9 9-21 13.5T797-10Zm-633 0q-12 0-24-4.5T119-28l-87-86q-9-9-13.5-20.5T14-158q0-12 4.5-24T32-203l242-242h98l30-30-181-181h-65L6-805l144-143 149 149v65l181 181 120-120-49-50 55-55H494l-41-41 177-178 42 42v112l55-56 170 171q20 20 32 46t12 55q0 32-14 61t-37 52l-98-98-64 65-48-49-230 230v97L208-28q-9 9-20.5 13.5T164-10Z"/></svg>
-                    <p class="font-anek font-semibold text-xl leading-none hyphens-manual">Dansk Tømrør&shy;service</p>
+                    <p class="font-anek font-semibold text-2xl leading-none hyphens-manual ">Dansk Tømrør&shy;service</p>
                 </div>
 
-                <div class="bg-yellow-100 w-1/2 h-full gap-x-2 justify-center uppercase text-center font-bold leading-none hidden md:flex">
-                    <div class="w-1/5 h-full bg-blue-400 flex px-2">
-                        <p class="w-full self-center">Hjem</p>
-                    </div>
-                    <div class="w-1/5 h-full bg-blue-400 flex px-2">
-                        <p class="w-full self-center">Tilbudte tjenester</p>
-                    </div>
-                    <div class="w-1/5 h-full bg-blue-400 flex px-2">
-                        <p class="w-full self-center">Tidligere værker</p>
-                    </div>
-                    <div class="w-1/5 h-full bg-blue-400 flex px-2">
-                        <p class="w-full self-center">Konakt</p>
-                    </div>
 
+                <div class="relative w-[20%] h-full ml-auto inline-flex items-center justify-center ">
+                    <!-- <svg class="aspect-square h-[60%] fill-current text-grey-800 bg-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M86-191v-126h788v126H86Zm0-226v-126h788v126H86Zm0-226v-126h788v126H86Z"/></svg> -->
+                    <button id="menubutton"  class="aspect-[1.3/1] h-[40%] flex flex-col justify-between ">
+                        <div id="hamburger1" class="w-full h-[5px] bg-gray-800 duration-[400ms] ease-[cubic-bezier(1, 0, 0, 1)] origin-top-left"></div>
+                        <div id="hamburger2" class="w-full h-[5px] bg-gray-800 duration-[150ms] ease-out"></div>
+                        <div id="hamburger3" class="w-full h-[5px] bg-gray-800 duration-[400ms] ease-[cubic-bezier(1, 0, 0, 1)] origin-bottom-left"></div>
 
-                </div>
-                <div class="relative w-[20%] h-full ml-auto inline-flex items-center justify-center">
-                    <svg class="aspect-square h-[60%] fill-current text-grey-800 " xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M86-191v-126h788v126H86Zm0-226v-126h788v126H86Zm0-226v-126h788v126H86Z"/></svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -73,39 +74,46 @@
 
         <div class="relative w-full h-[40%] bg-black overflow-hidden">
 
-            <video autoplay loop muted class="relative w-full h-full object-cover opacity-80">
+            <video autoplay loop muted playsinline style="pointer-events: none;"class="relative w-full h-full object-cover opacity-70">
                 <source src="../fonts/house_showcase.mp4" type="video/mp4">
             </video>
 
 
             <div class="absolute w-full md:w-1/2 xl:w-2/5 h-full top-0 flex flex-col justify-center px-[30px]">
-                <p class="tracking-widest text-xs uppercase text-amber-600 text-medium font-bold z-20">din lokale tømrør</p>
-                <p class="font-akshar uppercase text-3xl font-bold hyphens-manual z-20" lang="da">Dansk tømrør&shy;service</p>
-                <p class="text-gray-300 line-clamp-4 z-20 text-sm -mt-[5px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <button class="bg-gray-300/80 font-semibold font-anek text-amber-600 w-[50%] h-[40px] mt-[5px] rounded-md border-gray-800/100 border-[3px] flex items-center justify-center p-[2px] gap-x-[4px]">
-                    <svg class="fill-current text-gray-800 h-[90%] aspect-square" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12Z"/></svg>
-                    <p class="align-middle">12 34 12 34</p>
-                </button>
+                <p class="tracking-widest text-sm uppercase text-amber-600 text-medium font-bold z-20">din lokale tømrør</p>
+                <p class="font-akshar uppercase text-4xl font-bold hyphens-manual z-20" lang="da">Dansk tømrør&shy;service</p>
+                <p class="text-gray-300 line-clamp-4 md:line-clamp-5 z-20 text-base -mt-[5px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="w-full h-[35px] mt-[10px] flex gap-x-[6px]">
+
+                    <button class="bg-amber-600/80 font-semibold font-anek text-amber-   w-[40%] h-full rounded-md border-gray-800/100 border-[2px] flex items-center justify-center p-[2px] gap-x-[4px]">
+                        <p class="align-middle leading-none">Indhent tilbud</p>
+                    </button>
+                    <button class="bg-gray-300/80 font-semibold font-anek text-amber-600 w-[50%] h-full rounded-md border-gray-800/100 border-[2px] flex items-center justify-center p-[2px] gap-x-[4px]">
+                        <svg class="fill-current text-gray-800 h-[90%] aspect-square" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12Z"/></svg>
+                        <p class="align-middle">12 34 12 34</p>
+                    </button>
+                </div>
             </div>
 
         </div>
 
-        <div class="w-full h-[52.5%] align-center py-[12px] px-[18px] text-gray-800">
+        <div class="w-full h-[auto] flex-col  content-center  text-gray-800 px-[30px] py-[30px]">
             
-            <div class="h-[10%] w-full flex items-center justify-center uppercase font-akshar font-bold text-3xl">
+            <div class="h-[50px] w-full flex items-center justify-center uppercase font-akshar font-bold text-3xl ">
                 <p class="">
                     Hvem er 
                 </p>
-                <div class="h-[120%] relative flex justify-center">
-                    <img src="../fonts/whitepaint.png" class="aspect-video w-full imgfilters">
+                <div class="h-[95%] relative flex justify-center items-center">
+                    <img src="../fonts/whitepaint.png" class="aspect-video h-full imgfilters">
                     <p class="w-[80%] h-full absolute flex justify-center items-center top-0 z-20 ">
                         vi?
                     </p>
                 </div>
             </div>
 
-            <p class="text-center -mt-[0px] text-gray-600 text-sm">Lær dansk tømrerservice at kende.</p>
-            <p class="w-full text-wrap mt-[10px] text-gray-700 leading-[1.375rem]">
+            <p class="w-full text-center -mt-[6px] text-gray-600 text-sm">Lær vores værdier bedre at kende</p>
+
+            <p class="w-full text-wrap text-gray-700 leading-[1.375rem]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <span class="font-bold">fokus på kvalitet og tilfredshed</span> tempor incididunt ut labore et dolore magna aliqua. 
                 <br> <br>
                 Lorem ipsum dolor sit amet, <span class="font-bold">baseret i Aarhus</span> consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua. 
@@ -113,17 +121,21 @@
            
         </div>
 
-        <div class="w-full h-2/3 content-center overflow-hidden pb-[15px] bg-gray-300">
+        <div class="w-full h-auto content-center overflow-hidden py-[30px] bg-gray-300">
 
-            <div class="w-full px-[28px] mb-[10px]">
-                <p class="text-4xl md:text-5xl font-extrabold text-center font-anek text-gray-800 ">Vores Tjenester</p>
+            <div class="w-full px-[28px]">
+                <p class="text-4xl md:text-5xl font-extrabold text-center font-anek text-gray-800 ">Vores tjenester</p>
                 <p class="text-gray-600 text-center -mt-[4px]">Læs igennem det store udvalgt af tjenester som vi tilbyder vores kunder.</p>
             </div>
-           
+            
+            <p class=" w-full text-lg text-gray-800 underline align-middle h-auto flex justify-center items-center font-[650] mb-[30px] decoration-[2px] decoration-amber-600  underline-offset-[2px]">
+                Læs mere
+                <svg class="fill-current hover:text-amber-500 h-[25px] aspect-square mt-[4px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m556.24-238.35-59.65-61.67L633.56-437H161.87v-86h471.69L496.59-659.98l59.65-61.67L798.13-480 556.24-238.35Z"/></svg>
+            </p>
 
-            <div id="carousel" class="relative flex w-[85%] md:w-[55%] lg:w-[35%] h-[65%] mx-auto justify-center">
+            <div id="carousel" class="relative flex w-[85%] md:w-[55%] lg:w-[35%] aspect-[5/4] mx-auto justify-center mb-[10px]">
 
-                <div class="w-[110%] h-[20%] absolute self-center my-auto z-[100]">
+                <div class="w-[110%] h-[20%] absolute self-center my-auto z-[100] hidden md:block">
                     <button id="carousel_left" class="relative h-full aspect-square float-left flex justify-center items-center rotate-180">
                         <svg class="w-full h-full fill-current text-amber-600 hover:scale-[1.2] hover:text-amber-700 ease-out duration-200" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>                    
                     </button>
@@ -134,55 +146,61 @@
 
                 <div id="" class="outofframecard bg-black border-gray-800 border-[3px] absolute w-full h-full flex-none duration-[200ms] ease-out">
                     <img src="" class="w-full h-full object-cover ease-out duration-300">
-                    <div class="w-full h-[12.5%] absolute flex z-20 bg-gray-700 top-0 backdrop-filter backdrop-blur-lg border-gray-800 border-b-[3px] bg-opacity-[40%] ease-out duration-300 opacity-0">
-                        <p class="w-full px-[6px] my-auto font-akshar uppercase font-bold text-2xl line-clamp-1">
-                            Out of frame card
+                    <div class="w-full h-[30%] absolute bottom-0 flex flex-col justify-center z-20 bg-gray-700 backdrop-filter backdrop-blur-lg border-gray-800  border-t-[3px] bg-opacity-[40%] ease-out duration-300 opacity-100">
+                        <p class="w-full px-[6px] font-akshar uppercase font-bold text-xl line-clamp-1 align-middle underline underline-offset-[3px] decoration-amber-600">
+                            Out of frame
                         </p>
+                        <p class="text-sm w-full px-[6px] -mt-[4px] line-clamp-2 text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
 
                 <div id="" class="centercard bg-black border-gray-800 border-[3px] relative w-full h-full flex-none duration-[200ms] ease-out">
                     <img src="../fonts/slider2.jpg" class="w-full h-full object-cover ease-out duration-300">
-                    <div class="w-full h-[12.5%] absolute flex z-20 bg-gray-700 top-0 backdrop-filter backdrop-blur-lg border-gray-800  border-b-[3px] bg-opacity-[40%] ease-out duration-300 opacity-100">
-                        <p class="w-full px-[6px] my-auto font-akshar uppercase font-bold text-2xl line-clamp-1">
-                            Tjeneste <span class="text-amber-500">1</span> - Vinduer & døre
+                    <div class="w-full h-[30%] absolute bottom-0 flex flex-col justify-center z-20 bg-gray-700 backdrop-filter backdrop-blur-lg border-gray-800  border-t-[3px] bg-opacity-[40%] ease-out duration-300 opacity-100">
+                        <p class="w-full px-[6px] font-akshar uppercase font-bold text-xl line-clamp-1 align-middle underline underline-offset-[3px] decoration-amber-600">
+                            Vinduer & døre
                         </p>
+                        <p class="text-sm w-full px-[6px] -mt-[4px] line-clamp-2 text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
 
                 <div id="" class="leftcard bg-black border-gray-800 border-[3px] absolute w-full h-full flex-none duration-[200ms] ease-out">
                     <img src="../fonts/slider3.jpg" class="w-full h-full object-cover ease-out duration-300">
-                    <div class="w-full h-[12.5%] absolute flex z-20 bg-gray-700 top-0 backdrop-filter backdrop-blur-lg border-gray-800 border-b-[3px] bg-opacity-[40%] ease-out duration-300 opacity-0">
-                        <p class="w-full px-[6px] my-auto font-akshar uppercase font-bold text-2xl line-clamp-1 hyphens-manual">
-                            Tjeneste <span class="text-amber-500">5</span> - Tag&shy;arbejde
+                    <div class="w-full h-[30%] absolute bottom-0 flex flex-col justify-center z-20 bg-gray-700 backdrop-filter backdrop-blur-lg border-gray-800  border-t-[3px] bg-opacity-[40%] ease-out duration-300 opacity-100">
+                        <p class="w-full px-[6px] font-akshar uppercase font-bold text-xl line-clamp-1 align-middle underline underline-offset-[3px] decoration-amber-600">
+                            Tag&shy;arbejde
                         </p>
+                        <p class="text-sm w-full px-[6px] -mt-[4px] line-clamp-2 text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
 
                 <div id="" class="rightcard bg-black border-gray-800 border-[3px] absolute w-full h-full flex-none duration-[200ms] ease-out">
                     <img src="../fonts/slider4.jpg" class="w-full h-full object-cover ease-out duration-300">
-                    <div class="w-full h-[12.5%] absolute flex z-20 bg-gray-700 top-0 backdrop-filter backdrop-blur-lg border-gray-800 border-b-[3px] bg-opacity-[40%] ease-out duration-300 opacity-0">
-                        <p class="w-full px-[6px] my-auto font-akshar uppercase font-bold text-2xl line-clamp-1">
-                            Tjeneste <span class="text-amber-500">2</span> - Køkkener
+                    <div class="w-full h-[30%] absolute bottom-0 flex flex-col justify-center z-20 bg-gray-700 backdrop-filter backdrop-blur-lg border-gray-800  border-t-[3px] bg-opacity-[40%] ease-out duration-300 opacity-100">
+                        <p class="w-full px-[6px] font-akshar uppercase font-bold text-xl line-clamp-1 align-middle underline underline-offset-[3px] decoration-amber-600">
+                            Køkken
                         </p>
+                        <p class="text-sm w-full px-[6px] -mt-[4px] line-clamp-2 text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
 
                 <div id="" class="farleftcard bg-black border-gray-800 border-[3px] absolute w-full h-full flex-none duration-[200ms] ease-out">
                     <img src="../fonts/slider5.jpg" class="w-full h-full object-cover ease-out duration-300">
-                    <div class="w-full h-[12.5%] absolute flex z-20 bg-gray-700 top-0 backdrop-filter backdrop-blur-lg border-gray-800 border-b-[3px] bg-opacity-[40%] ease-out duration-300 opacity-0">
-                        <p class="w-full px-[6px] my-auto font-akshar uppercase font-bold text-2xl line-clamp-1 hyphens-manual">
-                            Tjeneste <span class="text-amber-500">4</span> - Gulv&shy;belægning
+                    <div class="w-full h-[30%] absolute bottom-0 flex flex-col justify-center z-20 bg-gray-700 backdrop-filter backdrop-blur-lg border-gray-800  border-t-[3px] bg-opacity-[40%] ease-out duration-300 opacity-100">
+                        <p class="w-full px-[6px] font-akshar uppercase font-bold text-xl line-clamp-1 align-middle underline underline-offset-[3px] decoration-amber-600">
+                            Gulv&shy;belægning
                         </p>
+                        <p class="text-sm w-full px-[6px] -mt-[4px] line-clamp-2 text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
 
                 <div id="" class="farrightcard bg-black border-gray-800 border-[3px] absolute w-full h-full flex-none duration-[200ms] ease-out">
                     <img src="../fonts/slider1.jpg" class="w-full h-full object-cover ease-out duration-300">
-                    <div class="w-full h-[12.5%] absolute flex z-20 bg-gray-700 top-0 backdrop-filter backdrop-blur-lg border-gray-800 border-b-[3px] bg-opacity-[40%] ease-out duration-300 opacity-0">
-                        <p class="w-full px-[6px] my-auto font-akshar uppercase font-bold text-2xl line-clamp-1">
-                            Tjeneste <span class="text-amber-500">3</span> - Murværk
+                    <div class="w-full h-[30%] absolute bottom-0 flex flex-col justify-center z-20 bg-gray-700 backdrop-filter backdrop-blur-lg border-gray-800  border-t-[3px] bg-opacity-[40%] ease-out duration-300 opacity-100">
+                        <p class="w-full px-[6px] font-akshar uppercase font-bold text-xl line-clamp-1 align-middle underline underline-offset-[3px] decoration-amber-600">
+                            Murværk
                         </p>
+                        <p class="text-sm w-full px-[6px] -mt-[4px] line-clamp-2 text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
 
@@ -191,7 +209,7 @@
            
         </div>
 
-        <!-- <div class="w-full h-screen"></div> -->
+        <div class="w-full h-screen"></div>
 
     
 

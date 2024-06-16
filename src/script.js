@@ -1,73 +1,5 @@
 
-// const Button = document.getElementById('scrolltoformbutton');
-// const sendButton = document.getElementById('sendbutton');
-// const Contactform = document.getElementById('scrollcontactform');
-
-// Button.onclick = function() {
-//     Contactform.scrollIntoView({behavior:"smooth",block:"center"})
-// };
-
-// sendButton.onclick = function () {
-
-// };
-
-// const carousel = document.getElementById('carousel');
-
-// let isDragStart = false, prevpageX, prevScrollLeft;
-// var velX = 0
-
-// var momentumID;
-
-// function beginMomentumTracking(){
-//   cancelMomentumTracking();
-//   momentumID = requestAnimationFrame(momentumLoop); 
-// }
-
-// function cancelMomentumTracking(){
-//   cancelAnimationFrame(momentumID);
-// }
-
-// function momentumLoop(){
-//   carousel.scrollLeft += velX; // Apply the velocity to the scroll position
-//   velX = velX * 0.95; // Slow the velocity slightly
-//   if (Math.abs(velX) > 0){ // Still moving?
-//     momentumID = requestAnimationFrame(momentumLoop); // Keep looping 
-//   }
-// }
-
-// const dragStart = (e) => {
-//     isDragStart = true;
-//     prevpageX = e.pageX || e.touches[0].pageX;
-//     prevScrollLeft = carousel.scrollLeft;
-//     cancelMomentumTracking(); // Stop the drag momentum loop
-// };
-
-// const dragStop = () => {
-//     isDragStart = false;
-//     carousel.classList.remove("dragging");
-//     beginMomentumTracking();
-// };
-
-// const dragging = (e) => {
-//     if (!isDragStart) return;
-//     e.preventDefault();
-//     carousel.classList.add("dragging");
-//     let posDiff = (e.pageX || e.touches[0].pageX) - prevpageX;
-//     carousel.scrollLeft = prevScrollLeft - posDiff;
-//     velX = carousel.scrollLeft - prevScrollLeft; 
-// };
-
-
-// carousel.addEventListener("mousedown", dragStart);
-// carousel.addEventListener("touchstart", dragStart);
-
-// carousel.addEventListener("mousemove", dragging);
-// carousel.addEventListener("touchmove", dragging);
-
-// carousel.addEventListener("mouseup", dragStop);
-// carousel.addEventListener("mouseleave", dragStop);
-// carousel.addEventListener("touchend", dragStop);
-
+const carouseldiv = document.getElementById('carousel')
 const buttonleft = document.getElementById('carousel_left')
 const buttonright = document.getElementById('carousel_right')
 
@@ -113,7 +45,7 @@ farrightdiv.style.left = "206%"
 
 let deb = false
 
-buttonleft.onclick = function () {
+const leftbuttonfunction = function() {
     if (deb == true) {
         return
     }
@@ -132,10 +64,7 @@ buttonleft.onclick = function () {
     rightdiv = document.getElementsByClassName('rightcard')[0]
     farrightdiv = document.getElementsByClassName('farrightcard')[0]
 
-    // centerdiv.classList.remove("scale-[1.03]")
-
     outofframediv.getElementsByTagName('img')[0].src = farrightdiv.getElementsByTagName('img')[0].src
-    // outofframediv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerText = ("Service " + farrightdiv.getElementsByTagName('img')[0].src.substring(15,16))
     outofframediv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerHTML = farrightdiv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerHTML
 
     outofframediv.style.left = "-206%"
@@ -174,20 +103,13 @@ buttonleft.onclick = function () {
         rightdiv.classList.add("farrightcard")
         farrightdiv.classList.add("outofframecard")
 
-        // outofframediv.id = "farleftcard"
-        // farleftdiv.id = "leftcard"
-        // leftdiv.id = "centercard"
-        // centerdiv.id = "rightcard"
-        // rightdiv.id = "farrightcard"
-        // farrightdiv.id = "outofframecard"
 
         deb = false
     }, 200);
 
-
 }
 
-buttonright.onclick = function () {
+const rightbuttonfunction = function() {
     if (deb == true) {
         return
     }
@@ -205,10 +127,7 @@ buttonright.onclick = function () {
     rightdiv = document.getElementsByClassName('rightcard')[0]
     farrightdiv = document.getElementsByClassName('farrightcard')[0]
 
-    // centerdiv.classList.remove("scale-[1.03]")
-
     outofframediv.getElementsByTagName('img')[0].src = farleftdiv.getElementsByTagName('img')[0].src
-    // outofframediv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerText = ("Service " + farleftdiv.getElementsByTagName('img')[0].src.substring(15,16))
     outofframediv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerHTML = farleftdiv.getElementsByTagName('div')[0].getElementsByTagName('p')[0].innerHTML
 
     outofframediv.style.left = "206%"
@@ -247,15 +166,88 @@ buttonright.onclick = function () {
         leftdiv.classList.add("farleftcard")
         farleftdiv.classList.add("outofframecard")
 
-        // outofframediv.id = "farrightcard"
-        // farrightdiv.id = "rightcard"
-        // rightdiv.id = "centercard"
-        // centerdiv.id = "leftcard"
-        // leftdiv.id = "farleftcard"
-        // farleftdiv.id = "outofframecard"
-
         deb = false
     }, 200);
 
+}
 
+buttonleft.onclick = leftbuttonfunction
+buttonright.onclick = rightbuttonfunction
+
+let startX, startY, endX, endY;
+
+carouseldiv.addEventListener('touchstart', function(event) {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+});
+
+carouseldiv.addEventListener('touchmove', function(event) {
+    endX = event.touches[0].clientX;
+    endY = event.touches[0].clientY;
+});
+
+carouseldiv.addEventListener('touchend', function(event) {
+    const deltaX = endX - startX;
+    const deltaY = endY - startY;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        if (deltaX > 0) {
+            leftbuttonfunction()
+        } else {
+            rightbuttonfunction()
+        }
+    } 
+})
+
+const slidermenu = document.getElementById("slidermenu")
+const blackoverlay = document.getElementById("blackoverlay")
+const sliderparent = document.getElementById("sliderparent")
+const menubutton = document.getElementById("menubutton")
+
+const hamburger1 = document.getElementById("hamburger1")
+const hamburger2 = document.getElementById("hamburger2")
+const hamburger3 = document.getElementById("hamburger3")
+
+var menudeb = false
+var menuopen = false
+
+sliderparent.style.display = "none"
+blackoverlay.style.opacity = "0"
+slidermenu.style.right = "-100%"
+
+menubutton.onclick = function() {
+    if (menudeb == true) {
+        return
+    }
+    menudeb = true
+    if (menuopen == false) {
+        sliderparent.style.display = "inline"
+        hamburger1.style.transform = "rotateZ(39.75deg)"
+        hamburger3.style.transform = "rotateZ(-39.75deg)"
+        hamburger2.style.opacity = "0"
+
+        setTimeout(() => {
+            blackoverlay.style.opacity = "0.55"
+            slidermenu.style.right = "0%"
+        }, 10);
+        setTimeout(() => {
+            menuopen = true
+            menudeb = false
+        }, 250);
+    } else if (menuopen == true) {
+        console.log("closing")
+        hamburger1.style.transform = "rotateZ(0deg)"
+        hamburger3.style.transform = "rotateZ(0deg)"
+        hamburger2.style.opacity = "1"
+
+        setTimeout(() => {
+            blackoverlay.style.opacity = "0"
+            slidermenu.style.right = "-100%"
+        }, 10);
+        setTimeout(() => {
+            sliderparent.style.display = "none"
+            menuopen = false
+            menudeb = false
+        }, 250);
+    }
 }
