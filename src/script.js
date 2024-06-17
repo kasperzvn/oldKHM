@@ -13,6 +13,7 @@ var farrightdiv = document.getElementsByClassName('farrightcard')[0]
 const frames = {outofframediv, farleftdiv, leftdiv, centerdiv, rightdiv, farrightdiv}
 const framesArray = Object.values(frames);
 
+let timestamp = performance.now()
 
 // for (let i = 0; i < 6; i++) {
 //     const IndexFrame = framesArray[i]
@@ -50,6 +51,7 @@ const leftbuttonfunction = function() {
         return
     }
     deb = true
+    timestamp = performance.now()
 
     outofframediv = document.getElementsByClassName('outofframecard')[0]
 
@@ -114,6 +116,7 @@ const rightbuttonfunction = function() {
         return
     }
     deb = true
+    timestamp = performance.now()
 
     outofframediv = document.getElementsByClassName('outofframecard')[0]
 
@@ -251,3 +254,12 @@ menubutton.onclick = function() {
         }, 250);
     }
 }
+
+const intervalId = setInterval(() => {
+    if (!(window.matchMedia("(min-width: 768px)").matches)) {
+        if (performance.now() - timestamp >= 5000) {
+            leftbuttonfunction();
+            timestamp = performance.now();
+        }
+    }
+}, 100);
