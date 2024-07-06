@@ -13,12 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-gray-200 text-gray-200 overflow-x-hidden">
 
-    <div class="w-[100vw] h-[100vh] absolute z-[300] text-gray-800 overflow-hidden" id="sliderparent">
-        <div class="w-full h-full relative">
+    <div class="w-[100vw] h-[100vh] absolute z-[300] text-gray-800 overflow-hidden " id="sliderparent">
+        <div class="w-full h-full relative min-[600px]:hidden">
 
             <div id="blackoverlay" class="absolute w-full h-full bg-black z-[301] duration-[250ms] ease-out"></div>
             
@@ -50,11 +51,11 @@
 
             <div class="w-[80%] h-full inline-flex items-center gap-x-[6px]">
                 <svg class="aspect-square h-[50%] fill-current text-amber-500"   viewBox="0 -960 960 960"><path d="M797-10q-12 0-23.5-4.5T753-28L529-252q-9-9-13.5-20.5T511-296q0-12 4.5-24t13.5-21l87-88q9-9 21-14t24-5q12 0 24 5t21 14l224 225q9 9 13.5 20.5T948-160q0 12-5 24t-14 21l-87 87q-9 9-21 13.5T797-10Zm-633 0q-12 0-24-4.5T119-28l-87-86q-9-9-13.5-20.5T14-158q0-12 4.5-24T32-203l242-242h98l30-30-181-181h-65L6-805l144-143 149 149v65l181 181 120-120-49-50 55-55H494l-41-41 177-178 42 42v112l55-56 170 171q20 20 32 46t12 55q0 32-14 61t-37 52l-98-98-64 65-48-49-230 230v97L208-28q-9 9-20.5 13.5T164-10Z"/></svg>
-                <p class="font-anek font-semibold text-2xl leading-none hyphens-manual ">Dansk Tømrør&shy;service</p>
+                <p class="font-anek font-semibold text-xl min-[600px]:text-2xl leading-none hyphens-manual ">Dansk Tømrør&shy;service</p>
             </div>
 
 
-            <div class="relative w-[20%] h-full ml-auto inline-flex items-center justify-end md:hidden">
+            <div class="relative w-[20%] h-full ml-auto inline-flex items-center justify-end min-[600px]:hidden">
                 <!-- <svg class="aspect-square h-[60%] fill-current text-grey-800 bg-green-400"  viewBox="0 -960 960 960"><path d="M86-191v-126h788v126H86Zm0-226v-126h788v126H86Zm0-226v-126h788v126H86Z"/></svg> -->
                 <button id="menubutton"  class="aspect-[1.3/1] h-[40%] flex flex-col justify-between ">
                     <div id="hamburger1" class="w-full h-[5px] bg-gray-800 duration-[400ms] ease-[cubic-bezier(1, 0, 0, 1)] origin-top-left"></div>
@@ -133,10 +134,10 @@
 
     </div>
 
-    <div class="w-[100vw] content-center overflow-x-hidden py-[20px]">
+    <div class="w-[100vw] content-center overflow-x-hidden overflow-y-hidden py-[20px] ">
 
         <div class="w-full px-[28px]">
-            <p class="text-4xl md:text-5xl font-[1000] text-center font-playfair text-gray-800 tracking-[0.0125em]">Vores tjenester</p>
+            <p class="text-4xl md:text-5xl font-[1000] text-center font-serifdisplay text-gray-800 tracking-[0.0125em] uppercase">Vores tjenester</p>
             <p class="text-gray-600 text-center mt-[2px]">Læs igennem det store udvalgt af tjenester som vi tilbyder vores kunder.</p>
         </div>
         
@@ -145,16 +146,52 @@
             <svg class="peer-hover:translate-x-[2px] hover:translate-x-[2px] ease-out duration-200 fill-current peer-hover:text-amber-600 hover:text-amber-600 cursor-pointer h-[25px] aspect-square mt-[4px]"  viewBox="0 -960 960 960"><path d="m556.24-238.35-59.65-61.67L633.56-437H161.87v-86h471.69L496.59-659.98l59.65-61.67L798.13-480 556.24-238.35Z"/></svg>
         </p>
 
-        <div id="carousel" class="relative flex w-[85%] sm:w-[55%] md:w-[45%] lg:w-[35%] h-[30vh] lg:h-[40vh] mx-auto justify-center mb-[10px]">
+        <div class="w-full hidden min-[600px]:flex">
+            <div class="w-full flex justify-center space-x-[10px]">
+                <div class="w-auto h-auto flex">
+                    <div class="bg-orange-600 aspect-video h-[30vh]">
 
-            <div class="w-[110%] h-[20%] absolute self-center my-auto z-[100] hidden">
+                    </div>
+                    <div class="bg-orange-800 aspect-video h-[30vh]">
+
+                    </div>
+                </div>
+
+
+
+                <!-- <div class="w-[47.5%] min-[850px]:w-[37.5%] max-w-[500px] aspect-video bg-green-400">
+                    <div class="h-full flex flex-wrap relative">
+                        <div class=" h-full border-gray-800 border-[3px] absolute rounded-md overflow-hidden">
+                            <img draggable="false" src="../fonts/slider2.jpg" class="w-full h-full object-cover">
+                        </div>
+                        <div class="w-full h-full border-gray-800/0 border-[3px] rounded-md overflow-hidden absolute -top-[100%] ">
+                            <img draggable="false" src="../fonts/slider3.jpg" class="w-full h-full object-cover" style="opacity: 0;">
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="w-[47.5%] min-[850px]:w-[37.5%] max-w-[500px] aspect-video text-gray-800 border-gray-800 border-[3px] rounded-md p-[10px] bg-gray-100/80">
+                    <p class="w-full font-akshar uppercase font-bold text-xl md:text-2xl line-clamp-1 align-middle underline underline-offset-[3px] decoration-amber-600 flex items-center gap-x-[5px]">
+                        <svg class="fill-current text-amber-600 aspect-square h-[20px] md:h-[24px]" viewBox="0 -960 960 960"><path d="M86-520v-354h354v354H86Zm0 434v-354h354v354H86Zm434-434v-354h354v354H520Zm0 434v-354h354v354H520Z"/></svg>
+                        Vinduer & døre
+                    </p>
+                    <p class="text-balance">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                   
+                </div> -->
+            </div>
+
+
+        </div>
+
+        <div id="carousel" class="relative flex min-[600px]:hidden w-[85%] sm:w-[55%] md:w-[45%] lg:w-[35%] h-[30vh] lg:h-[40vh] mx-auto justify-center mb-[10px]">
+
+            <!-- <div class="w-[110%] h-[20%] absolute self-center my-auto z-[100] hidden">
                 <button id="carousel_left" class="relative h-full aspect-square float-left flex justify-center items-center rotate-180">
                     <svg class="w-full h-full fill-current text-amber-600 hover:scale-[1.2] hover:text-amber-700 ease-out duration-200"  viewBox="0 -960 960 960"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>                    
                 </button>
                 <button id="carousel_right" class="relative h-full aspect-square float-right flex justify-center items-center rounded-full ease-out duration-[200ms]">
                     <svg class="w-full h-full fill-current text-amber-600 hover:scale-[1.2] hover:text-amber-700 ease-out duration-200"  viewBox="0 -960 960 960"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>               
                 </button>
-            </div>
+            </div> -->
 
             <div id="" class="outofframecard bg-black border-gray-800 border-[3px] absolute w-full h-full flex-none duration-[200ms] ease-out rounded-md overflow-hidden">
                 <img draggable="false" src="" class="w-full h-full object-cover ease-out duration-300">
@@ -226,55 +263,7 @@
         
     </div>
 
-    <!-- <div class="w-full py-[20px] px-[10%] lg:px-[20%]">
-
-        <div class="flex-col content-center  text-gray-800">
-            <div class="w-full flex-col content-center">
-                <div class="h-[50px] min-[600px]:h-[60px] w-full flex items-center justify-center uppercase font-akshar font-bold text-4xl min-[600px]:text-5xl">
-                    <p class="">
-                        Hvem er 
-                    </p>
-                    <div class="h-[95%] relative flex justify-center items-center">
-                        <img src="../fonts/whitepaint.png" class="aspect-video h-full imgfilters mb-[4px]">
-                        <p class="w-[80%] h-full absolute flex justify-center items-center z-20 ">
-                            vi?
-                        </p>
-                    </div>
-                </div>
     
-                <p class="w-full text-center -mt-[12px] sm:-mt-[6px] min-[600px]:-mt-[18px] text-gray-600 text-base min-[600px]:text-xl ">Lær vores historie at kende</p>
-            </div>
-
-            <div class="w-full mt-[10px] flex bg-red-400">
-
-                <div class="min-[600px]:w-[50%] w-[100%] h-[25vh] grid place-items-center">
-                    <p class="w-full text-gray-700 leading-[1.375rem] line-clamp-[9] min-[600px]:line-clamp-[9]">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <span class="font-bold">fokus på kvalitet og tilfredshed</span> tempor incididunt ut labore et dolore magna aliqua. 
-                        <br> <br>
-                        Lorem ipsum dolor sit amet, <span class="font-bold">baseret i Aarhus</span> consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua. 
-                        <br> <br>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua <span class="font-bold">mere end 20 års erfaring.</span>
-                    </p>
-                </div>
-
-                <div class="w-[50%] h-full justify-center hidden min-[600px]:flex">
-                    <div class="w-[80%] h-[90%] rounded-md border-[4px] border-gray-600 self-end overflow-hidden">
-                        <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d934.2321516592106!2d10.209257091572976!3d56.15725946949306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c3f96caff54bd%3A0xc2f5bc6f94c8eab6!2sAarhus%20Domkirke!5e0!3m2!1sda!2sdk!4v1719583806441!5m2!1sda!2sdk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-
-            </div>
-
-        
-
-        </div>
-    </div> -->
-       
-
-        
-
-
-    <!-- </div> -->
 
     <script src="../src/script.js" defer></script>
 

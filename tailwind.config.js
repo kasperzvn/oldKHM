@@ -17,7 +17,8 @@ module.exports = {
         syne: ["Syne", ...defaultTheme.fontFamily.sans],
         anek: ["Anek Latin", ...defaultTheme.fontFamily.sans],
         playfair: ["Playfair Display", ...defaultTheme.fontFamily.sans],
-        akshar: ["Akshar", ...defaultTheme.fontFamily.sans]
+        akshar: ["Akshar", ...defaultTheme.fontFamily.sans],
+        serifdisplay: ["DM Serif Display", ...defaultTheme.fontFamily.sans]
       },
       backgroundImage: {
         "grid": "url(../fonts/grid.png)",

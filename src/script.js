@@ -174,33 +174,33 @@ const rightbuttonfunction = function() {
 
 }
 
-buttonleft.onclick = leftbuttonfunction
-buttonright.onclick = rightbuttonfunction
+// buttonleft.onclick = leftbuttonfunction
+// buttonright.onclick = rightbuttonfunction
 
-let startX, startY, endX, endY;
+// let startX, startY, endX, endY;
 
-carouseldiv.addEventListener('touchstart', function(event) {
-    startX = event.touches[0].clientX;
-    startY = event.touches[0].clientY;
-});
+// carouseldiv.addEventListener('touchstart', function(event) {
+//     startX = event.touches[0].clientX;
+//     startY = event.touches[0].clientY;
+// });
 
-carouseldiv.addEventListener('touchmove', function(event) {
-    endX = event.touches[0].clientX;
-    endY = event.touches[0].clientY;
-});
+// carouseldiv.addEventListener('touchmove', function(event) {
+//     endX = event.touches[0].clientX;
+//     endY = event.touches[0].clientY;
+// });
 
-carouseldiv.addEventListener('touchend', function(event) {
-    const deltaX = endX - startX;
-    const deltaY = endY - startY;
+// carouseldiv.addEventListener('touchend', function(event) {
+//     const deltaX = endX - startX;
+//     const deltaY = endY - startY;
 
-    if (Math.abs(deltaX) > Math.abs(deltaY)) {
-        if (deltaX > 0) {
-            leftbuttonfunction()
-        } else {
-            rightbuttonfunction()
-        }
-    } 
-})
+//     if (Math.abs(deltaX) > Math.abs(deltaY)) {
+//         if (deltaX > 0) {
+//             leftbuttonfunction()
+//         } else {
+//             rightbuttonfunction()
+//         }
+//     } 
+// })
 
 const slidermenu = document.getElementById("slidermenu")
 const blackoverlay = document.getElementById("blackoverlay")
