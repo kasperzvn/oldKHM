@@ -10,9 +10,16 @@
     background-image: repeating-linear-gradient(45deg, #f59f0b60 0, #f59f0b60 2.1px, #e5e7eb 0, #e5e7eb 50%); */
 
     opacity: 1;
-    background-image:  linear-gradient(rgba(245, 159, 10, 0.1) 1.8px, transparent 1.8px), linear-gradient(90deg, rgba(245, 159, 10, 0.1) 1.8px, transparent 1.8px), linear-gradient(rgba(245, 159, 10, 0.1) 0.9px, transparent 0.9px), linear-gradient(90deg, rgba(245, 159, 10, 0.1) 0.9px, #e5e7eb 0.9px);
-    background-size: 45px 45px, 45px 45px, 9px 9px, 9px 9px;
-    background-position: -1.8px -1.8px, -1.8px -1.8px, -0.9px -0.9px, -0.9px -0.9px;
+    background-image:  linear-gradient(rgba(217,119,6,0.1) 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(90deg, rgba(217,119,6,0.1) 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(rgba(217,119,6,0.1) 0.7000000000000001px, transparent 0.7000000000000001px), linear-gradient(90deg, rgba(217,119,6,0.1) 0.7000000000000001px, #e5e7eb 0.7000000000000001px);
+    background-size: 35px 35px, 35px 35px, 7px 7px, 7px 7px;
+    background-position: -1.4000000000000001px -1.4000000000000001px, -1.4000000000000001px -1.4000000000000001px, -0.7000000000000001px -0.7000000000000001px, -0.7000000000000001px -0.7000000000000001px;
+}
+
+.crosspattern {
+    background-color: #d1d5db;
+opacity: 1;
+background: radial-gradient(circle, transparent 20%, #d1d5db 20%, #d1d5db 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #d1d5db 20%, #d1d5db 80%, transparent 80%, transparent) 20px 20px, linear-gradient(rgba(217,119,6,0.35) 1.6px, transparent 1.6px) 0 -0.8px, linear-gradient(90deg, rgba(217,119,6,0.35) 1.6px, #d1d5db 1.6px) -0.8px 0;
+background-size: 40px 40px, 40px 40px, 20px 20px, 20px 20px;
 }
 
 
@@ -89,7 +96,8 @@
 }
 
 .imgfilters {
-    filter: invert(46%) sepia(80%) saturate(1856%) hue-rotate(9deg) brightness(96%) contrast(95%);
+    /* filter: invert(46%) sepia(80%) saturate(1856%) hue-rotate(9deg) brightness(96%) contrast(95%); */
+    filter: brightness(0) saturate(100%) invert(69%) sepia(45%) saturate(5016%) hue-rotate(2deg) brightness(95%) contrast(92%);
 }
 
 .specialheight {

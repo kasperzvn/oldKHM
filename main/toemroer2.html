@@ -21,10 +21,10 @@
     <div class="w-[100vw] h-[100vh] absolute z-[300] text-gray-800 overflow-hidden " id="sliderparent">
         <div class="w-full h-full relative min-[600px]:hidden">
 
-            <div id="blackoverlay" class="absolute w-full h-full bg-black z-[301] duration-[250ms] ease-out"></div>
+            <div id="blackoverlay" class="fixed w-full h-full bg-black z-[301] duration-[250ms] ease-out"></div>
             
            
-            <div id="slidermenu" class="absolute w-[85%] specialheight bottom-0 right-0 bg-gray-300 flex-col p-[20px] z-[302] ease-[cubic-bezier(0.25, 1, 0.5, 1)] duration-[250ms]">
+            <div id="slidermenu" class="fixed w-[85%] specialheight bottom-0 right-0 bg-gray-300 flex-col p-[20px] z-[302] ease-[cubic-bezier(0.25, 1, 0.5, 1)] duration-[250ms]">
                 <div class="w-full h-[92%] flex-col ">
 
                     <button class="w-full aspect-[7]">
@@ -50,8 +50,8 @@
         <div class="w-full h-full flex">
 
             <div class="w-[80%] h-full inline-flex items-center gap-x-[6px]">
-                <svg class="aspect-square h-[50%] fill-current text-amber-500"   viewBox="0 -960 960 960"><path d="M797-10q-12 0-23.5-4.5T753-28L529-252q-9-9-13.5-20.5T511-296q0-12 4.5-24t13.5-21l87-88q9-9 21-14t24-5q12 0 24 5t21 14l224 225q9 9 13.5 20.5T948-160q0 12-5 24t-14 21l-87 87q-9 9-21 13.5T797-10Zm-633 0q-12 0-24-4.5T119-28l-87-86q-9-9-13.5-20.5T14-158q0-12 4.5-24T32-203l242-242h98l30-30-181-181h-65L6-805l144-143 149 149v65l181 181 120-120-49-50 55-55H494l-41-41 177-178 42 42v112l55-56 170 171q20 20 32 46t12 55q0 32-14 61t-37 52l-98-98-64 65-48-49-230 230v97L208-28q-9 9-20.5 13.5T164-10Z"/></svg>
-                <p class="font-anek font-semibold text-xl min-[600px]:text-2xl leading-none hyphens-manual ">Dansk Tømrør&shy;service</p>
+                <!-- <svg class="aspect-square h-[50%] fill-current "   viewBox="0 -960 960 960"><path d="M579 42 360-177l68-67L51-783l202-201 676 675L579 42Zm0-178 171-172-40-42-173 173 42 41Z"/></svg> -->
+                <p class="font-serifdisplay uppercase tracking-wide font-semibold text-xl min-[600px]:text-2xl leading-none hyphens-manual "><span class="text-amber-600">Dansk</span><br> tømrerservice</p>
             </div>
 
 
@@ -75,8 +75,8 @@
 
 
         <div class="absolute w-full min-[600px]:w-1/2 xl:w-2/5 h-full top-0 flex flex-col justify-center px-[30px]">
-            <p class="tracking-widest text-sm uppercase text-amber-600 text-medium font-bold z-20">din lokale tømrør</p>
-            <p class="font-akshar uppercase text-4xl font-bold hyphens-manual z-20" lang="da"><span class="">Dansk tømrør&shy;service</span></p>
+            <p class="tracking-widest text-sm uppercase text-amber-600 text-medium font-bold z-20">din lokale tømrer</p>
+            <p class="font-serifdisplay tracking-wide uppercase text-4xl font-bold hyphens-manual z-20" lang="da"><span class="">Dansk tømrer&shy;service</span></p>
             <p class="text-gray-300 line-clamp-4 min-[600px]:line-clamp-5 z-20 text-base -mt-[5px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <div class="w-full h-[35px] mt-[10px] flex gap-x-[6px] text-sm min-[600px]:text-base">
 
@@ -112,10 +112,10 @@
             <p class="w-full text-center text-gray-600 text-base min-[600px]:text-xl -mt-[12px]">Lær vores historie at kende</p>
         </div>
 
-        <div class="w-[100%] items-stretch flex flex-col min-[600px]:flex-row space-y-[12px] min-[600px]:space-x-[40px]">
+        <div class="w-[100%] items-stretch flex flex-col min-[850px]:flex-row justify-center space-y-[12px] min-[850px]:space-x-[40px]">
 
-            <div class="w-[100%] min-[600px]:w-[50%] flex items-center">
-                <p class="w-full text-gray-700 leading-[1.35rem] text-center min-[600px]:text-left">
+            <div class="w-[100%] min-[850px]:w-[50%] flex items-center max-w-[400px]">
+                <p class="w-full text-gray-700 leading-[1.35rem] text-center min-[850px]:text-left">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <span class="font-bold">fokus på kvalitet og tilfredshed</span> tempor incididunt ut labore et dolore magna aliqua. 
                     <br><br>
                     Lorem ipsum dolor sit amet, <span class="font-bold">baseret i Aarhus</span> consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua. 
@@ -124,8 +124,8 @@
                 </p>
             </div>
 
-            <div class="w-[100%] min-[600px]:w-[50%] flex justify-center">
-                <div style="-webkit-filter: grayscale(100%); filter: grayscale(100%);" class="w-full max-w-[400px] min-h-[250px] rounded-md border-[4px] border-gray-600 overflow-hidden">
+            <div class="w-[100%] min-[850px]:w-[50%] flex justify-center max-w-[400px] ">
+                <div style="-webkit-filter: grayscale(100%); filter: grayscale(100%);" class="w-full min-h-[250px] rounded-md border-[3px] border-gray-800 overflow-hidden">
                     <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d934.2321516592106!2d10.209257091572976!3d56.15725946949306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c3f96caff54bd%3A0xc2f5bc6f94c8eab6!2sAarhus%20Domkirke!5e0!3m2!1sda!2sdk!4v1719583806441!5m2!1sda!2sdk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
@@ -138,51 +138,85 @@
 
         <div class="w-full px-[28px]">
             <p class="text-4xl min-[600px]:text-5xl font-[1000] text-center font-serifdisplay  tracking-[0.0125em] uppercase">Vores tjenester</p>
-            <p class="text-gray-600 w-full text-center mt-[2px] px-[5vw] min-[600px]:px-[20vw] min-[1000px]:px-[35vw]">Læs igennem det store udvalgt af tjenester som vi tilbyder vores kunder.</p>
+            <p class="text-gray-600 w-full text-center -mt-[4px] text-base min-[600px]:text-xl">Læs igennem det store udvalgt af tjenester som vi tilbyder vores kunder.</p>
         </div>
         
-        <p class=" w-full text-lg underline align-middle h-auto flex justify-center items-center font-[650] mb-[30px] decoration-[2px] decoration-amber-600  underline-offset-[2px] group">
+        <p class=" w-full text-lg underline align-middle h-auto flex justify-center items-center font-[650] mb-[30px] decoration-[2px] decoration-amber-600  underline-offset-[2px] ">
             <span class="cursor-pointer peer">Læs mere</span>
             <svg class="peer-hover:translate-x-[2px] hover:translate-x-[2px] ease-out duration-200 fill-current peer-hover:text-amber-600 hover:text-amber-600 cursor-pointer h-[25px] aspect-square mt-[4px]"  viewBox="0 -960 960 960"><path d="m556.24-238.35-59.65-61.67L633.56-437H161.87v-86h471.69L496.59-659.98l59.65-61.67L798.13-480 556.24-238.35Z"/></svg>
         </p>
 
-        <div class="w-full hidden min-[600px]:flex">
-            <div class="w-full flex justify-center">
-                <div class="w-auto h-auto flex rounded-md overflow-hidden border-[3px] border-gray-800">
-                    <div class="aspect-video bg-black h-[25vh] min-[800px]:h-[30vh] border-r-[3px] border-gray-800">
+        <div class="w-full hidden min-[600px]:flex px-[10px]">
+            <div class="w-full flex flex-wrap justify-center gap-[10px]">
+
+                <div class="aspect-[1.15/1.6] w-[250px] border-[3px] border-gray-800 rounded-md overflow-hidden bg-gray-100/80 cursor-pointer ease-out duration-200 hover:scale-[1.025] hover:-rotate-[0.5deg] group">
+                    <div class="aspect-video w-full bg-black border-b-[3px] border-gray-800">
                         <img draggable="false" src="../fonts/slider2.jpg" class="w-full h-full object-cover opacity-[.8]">
                     </div>
-                    <div class="w-auto h-[25vh] min-[800px]:h-[30vh] p-[10px] flex flex-col pattern2">
-                        <p style="opacity: 1;" class="opacity-100 w-full font-akshar uppercase font-bold text-2xl line-clamp-1 align-middle underline underline-offset-[3px] decoration-amber-600 flex items-center gap-x-[5px]">
+                    <div class="w-full ">
+                        <p class="opacity-100 w-full px-[10px] font-akshar uppercase font-bold text-2xl line-clamp-1 align-middle underline underline-offset-[3px] decoration-amber-600 flex items-center gap-x-[5px] ">
                             <svg class="fill-current text-amber-600 aspect-square h-[20px] md:h-[24px]" viewBox="0 -960 960 960"><path d="M86-520v-354h354v354H86Zm0 434v-354h354v354H86Zm434-434v-354h354v354H520Zm0 434v-354h354v354H520Z"/></svg>
                             Vinduer & døre
                         </p>
-                        <p class=" line-clamp-[6] w-[35vw] max-w-[350px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="line-clamp-[7] w-full text-[15px] px-[10px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
+
+                <div class="aspect-[1.15/1.6] w-[250px] border-[3px] border-gray-800 rounded-md overflow-hidden bg-gray-100/80 cursor-pointer ease-out duration-200 hover:scale-[1.025] hover:rotate-[0.5deg]">
+                    <div class="aspect-video w-full bg-black border-b-[3px] border-gray-800">
+                        <img draggable="false" src="../fonts/slider3.jpg" class="w-full h-full object-cover opacity-[.8]">
+                    </div>
+                    <div class="w-full">
+                        <p class="opacity-100 w-full px-[10px] font-akshar uppercase font-bold text-2xl line-clamp-1 align-middle underline underline-offset-[3px] decoration-amber-600 flex items-center gap-x-[5px]">
+                            <svg class="fill-current text-amber-600 aspect-square h-[20px] md:h-[24px]" viewBox="0 -960 960 960"><path d="M314-126v-332h332v332H314ZM81-406 6-505l474-369 139 108v-68h165v197l170 132-76 99-398-310L81-406Z"/></svg>
+                            Tag&shy;arbejde
+                        </p>
+                        <p class="line-clamp-[7] w-full text-[15px] px-[10px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+
+                <div class="aspect-[1.15/1.6] w-[250px] border-[3px] border-gray-800 rounded-md overflow-hidden bg-gray-100/80 cursor-pointer ease-out duration-200 hover:scale-[1.025] hover:-rotate-[0.5deg]">
+                    <div class="aspect-video w-full bg-black border-b-[3px] border-gray-800">
+                        <img draggable="false" src="../fonts/slider4.jpg" class="w-full h-full object-cover opacity-[.8]">
+                    </div>
+                    <div class="w-full">
+                        <p class="opacity-100 w-full px-[10px] font-akshar uppercase font-bold text-2xl line-clamp-1 align-middle underline underline-offset-[3px] decoration-amber-600 flex items-center gap-x-[5px]">
+                            <svg class="fill-current text-amber-600 aspect-square h-[20px] md:h-[24px]" viewBox="0 -960 960 960"><path d="M200-126q-64 0-109-45T46-280v-194h589q12-47 43.5-82.5T756-608l165-56 39 120-156 53q-23 8-36.5 27.5T754-419v139q0 64-45 109t-109 45H200Zm-65-428q5-42-2.5-73.5T96-704q-27-43-35.5-81T59-874h116q-6 43 2.5 75.5T214-721q27 43 35.5 80t1.5 87H135Zm180 0q5-42-2.5-73.5T276-704q-27-43-35.5-81t-1.5-89h116q-6 43 2.5 75.5T394-721q27 43 35.5 80t1.5 87H315Zm190 0q5-42-2.5-73.5T466-704q-27-43-35.5-81t-1.5-89h116q-6 43 2.5 75.5T584-721q27 43 35.5 80t1.5 87H505Z"/></svg>
+                            Køkken
+                        </p>
+                        <p class="line-clamp-[7] w-full text-[15px] px-[10px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                
+                <div class="aspect-[1.15/1.6] w-[250px] border-[3px] border-gray-800 rounded-md overflow-hidden bg-gray-100/80 cursor-pointer ease-out duration-200 hover:scale-[1.025] hover:rotate-[0.5deg]">
+                    <div class="aspect-video w-full bg-black border-b-[3px] border-gray-800">
+                        <img draggable="false" src="../fonts/slider5.jpg" class="w-full h-full object-cover opacity-[.8]">
+                    </div>
+                    <div class="w-full">
+                        <p class="opacity-100 w-full px-[10px] font-akshar uppercase font-bold text-2xl line-clamp-1 align-middle underline underline-offset-[3px] decoration-amber-600 flex items-center gap-x-[5px]">
+                            <svg class="fill-current text-amber-600 aspect-square h-[20px] md:h-[24px]" viewBox="0 -960 960 960"><path d="M97-57v-126h140v-180h180v-180h180v-180h180v-140h126v266H723v180H543v180H363v180H97Z"/></svg>
+                            Gulv&shy;belægning
+                        </p>
+                        <p class="line-clamp-[7] w-full text-[15px] px-[10px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+
+                <div class="aspect-[1.15/1.6] w-[250px] border-[3px] border-gray-800 rounded-md overflow-hidden bg-gray-100/80 cursor-pointer ease-out duration-200 hover:scale-[1.025] hover:-rotate-[0.5deg]">
+                    <div class="aspect-video w-full bg-black border-b-[3px] border-gray-800">
+                        <img draggable="false" src="../fonts/slider1.jpg" class="w-full h-full object-cover opacity-[.8]">
+                    </div>
+                    <div class="w-full">
+                        <p class="opacity-100 w-full px-[10px] font-akshar uppercase font-bold text-2xl line-clamp-1 align-middle underline underline-offset-[3px] decoration-amber-600 flex items-center gap-x-[5px]">
+                            <svg class="fill-current text-amber-600 aspect-square h-[20px] md:h-[24px]" viewBox="0 -960 960 960"><path d="M176-86v-165H96v-126h80v-102l-94 73L7-507l473-368 474 368-75 101-95-74v103h81v126h-81v165H658v-165H542v165H417v-165H302v165H176Zm126-291h115v-291l-115 90v201Zm240 0h116v-201l-116-91v292Z"/></svg>
+                            Murværk
+                        </p>
+                        <p class="line-clamp-[7] w-full text-[15px] px-[10px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+
             </div>
 
 
-
-                <!-- <div class="w-[47.5%] min-[850px]:w-[37.5%] max-w-[500px] aspect-video bg-green-400">
-                    <div class="h-full flex flex-wrap relative">
-                        <div class=" h-full border-gray-800 border-[3px] absolute rounded-md overflow-hidden">
-                            <img draggable="false" src="../fonts/slider2.jpg" class="w-full h-full object-cover">
-                        </div>
-                        <div class="w-full h-full border-gray-800/0 border-[3px] rounded-md overflow-hidden absolute -top-[100%] ">
-                            <img draggable="false" src="../fonts/slider3.jpg" class="w-full h-full object-cover" style="opacity: 0;">
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <div class="w-[47.5%] min-[850px]:w-[37.5%] max-w-[500px] aspect-video text-gray-800 border-gray-800 border-[3px] rounded-md p-[10px] bg-gray-100/80">
-                    <p class="w-full font-akshar uppercase font-bold text-xl md:text-2xl line-clamp-1 align-middle underline underline-offset-[3px] decoration-amber-600 flex items-center gap-x-[5px]">
-                        <svg class="fill-current text-amber-600 aspect-square h-[20px] md:h-[24px]" viewBox="0 -960 960 960"><path d="M86-520v-354h354v354H86Zm0 434v-354h354v354H86Zm434-434v-354h354v354H520Zm0 434v-354h354v354H520Z"/></svg>
-                        Vinduer & døre
-                    </p>
-                    <p class="text-balance">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                   
-                </div> -->
-            <!-- </div> -->
 
 
         </div>
@@ -267,6 +301,61 @@
 
         
     </div>
+
+    <div class="w-[100vw] py-[20px] text-gray-800 px-[10px] stripedpattern border-gray-800 border-t-[3px]">
+        <p class="font-akshar font-bold text-center text-4xl min-[600px]:text-5xl">HVORFOR VÆLGE OS?</p>
+        <p class="w-full text-center -mt-[10px] text-base min-[600px]:text-xl">Se vores anmeldelser fra <span class="decoration-amber-500 underline decoration-[2px] min-[600px]:decoration-[2px] font-bold cursor-pointer">trustpilot.dk</span></p>
+        <div class="w-full flex flex-wrap mt-[15px] gap-[10px] justify-center">
+
+            <div class="w-full h-[20vh] rounded-md overflow-hidden border-gray-400 bg-gray-100 border-[2px] px-[10px] py-[6px] max-w-[300px]">
+                <p class="font-akshar text-[22px] font-bold uppercase">Fantastisk service</p>
+                <div class="h-[20px] flex text-amber-500 -mt-[8px]">
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                </div>
+                <p class="text-[15px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="w-full h-[20vh] rounded-md overflow-hidden border-gray-400 bg-gray-100 border-[2px] px-[10px] py-[6px] max-w-[300px]">
+                <p class="font-akshar text-[22px] font-bold uppercase">Hurtigt og Godt</p>
+                <div class="h-[20px] flex text-amber-500 -mt-[8px]">
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                </div>
+                <p class="text-[15px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>            
+            <div class="w-full h-[20vh] rounded-md overflow-hidden border-gray-400 bg-gray-100 border-[2px] px-[10px] py-[6px] max-w-[300px]">
+                <p class="font-akshar text-[22px] font-bold uppercase">Super kvalitet</p>
+                <div class="h-[20px] flex text-amber-500 -mt-[8px]">
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                    <svg class="fill-current aspect-square h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-231 311-129q-18 11-37 9.5T241-132q-14-11-21.5-28t-2.5-37l45-192-150-130q-16-14-20-32t1-35q5-17 19.5-29t35.5-14l197-17 77-182q8-20 24-29t34-9q18 0 34 9t24 29l77 182 197 17q21 2 35.5 14t19.5 29q5 17 1 35t-20 32L698-389l45 192q5 20-2.5 37T719-132q-14 11-33 12.5t-37-9.5L480-231Z"/></svg>
+                </div>
+                <p class="text-[15px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+        </div>
+        <p class=" w-full text-lg underline align-middle h-auto flex justify-center items-center mt-[6px] font-[650] decoration-[2px] decoration-amber-500 underline-offset-[2px] ">
+            <span class="cursor-pointer peer">Læs alle anmeldelser</span>
+            <svg class="peer-hover:translate-x-[2px] hover:translate-x-[2px] ease-out duration-200 fill-current peer-hover:text-amber-500 hover:text-amber-500 cursor-pointer h-[25px] aspect-square mt-[4px]"  viewBox="0 -960 960 960"><path d="m556.24-238.35-59.65-61.67L633.56-437H161.87v-86h471.69L496.59-659.98l59.65-61.67L798.13-480 556.24-238.35Z"/></svg>
+        </p>
+    </div>
+
+    <div class="w-[100vw] text-gray-800 py-[20px] px-[28px] border-gray-800  border-t-[3px]">
+        <p class="text-4xl min-[600px]:text-5xl font-[1000] text-center font-serifdisplay  tracking-[0.0125em] uppercase">Kontakt os</p>
+        <p class="text-gray-600 w-full text-center -mt-[4px] text-base min-[600px]:text-xl">Send os en besked med din opgave - så vender vi tilbage med et uforpligtende tilbud.</p>
+        <div class="w-full">
+            <p>Per mobil</p>
+        </div>
+    </div>
+
 
     
 
