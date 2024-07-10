@@ -10,7 +10,7 @@
     background-image: repeating-linear-gradient(45deg, #f59f0b60 0, #f59f0b60 2.1px, #e5e7eb 0, #e5e7eb 50%); */
 
     opacity: 1;
-    background-image:  linear-gradient(rgba(217,119,6,0.1) 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(90deg, rgba(217,119,6,0.1) 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(rgba(217,119,6,0.1) 0.7000000000000001px, transparent 0.7000000000000001px), linear-gradient(90deg, rgba(217,119,6,0.1) 0.7000000000000001px, #e5e7eb 0.7000000000000001px);
+    background-image:  linear-gradient(rgba(217,119,6,0.1) 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(90deg, rgba(217,119,6,0.1) 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(rgba(217,119,6,0.1) 0.7000000000000001px, transparent 0.7000000000000001px), linear-gradient(90deg, rgba(217,119,6,0.1) 0.7000000000000001px, #f3f4f6 0.7000000000000001px);
     background-size: 35px 35px, 35px 35px, 7px 7px, 7px 7px;
     background-position: -1.4000000000000001px -1.4000000000000001px, -1.4000000000000001px -1.4000000000000001px, -0.7000000000000001px -0.7000000000000001px, -0.7000000000000001px -0.7000000000000001px;
 }
