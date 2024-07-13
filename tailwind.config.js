@@ -18,7 +18,8 @@ module.exports = {
         anek: ["Anek Latin", ...defaultTheme.fontFamily.sans],
         playfair: ["Playfair Display", ...defaultTheme.fontFamily.sans],
         akshar: ["Akshar", ...defaultTheme.fontFamily.sans],
-        serifdisplay: ["DM Serif Display", ...defaultTheme.fontFamily.sans]
+        serifdisplay: ["DM Serif Display", ...defaultTheme.fontFamily.sans],
+        cookie: ["Cookie", ...defaultTheme.fontFamily.sans]
       },
       backgroundImage: {
         "grid": "url(../fonts/grid.png)",
