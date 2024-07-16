@@ -15,27 +15,6 @@ const framesArray = Object.values(frames);
 
 let timestamp = performance.now()
 
-// for (let i = 0; i < 6; i++) {
-//     const IndexFrame = framesArray[i]
-//     document.addEventListener("DOMContentLoaded", () => {
-
-//         const observer = new MutationObserver((mutationsList) => {
-//             for (let mutation of mutationsList) {
-//                 if (mutation.type === 'attributes' && mutation.attributeName === 'id') {
-//                     if (mutation.target.id == "centercard") {
-//                         mutation.target.classList.add("scale-[1.03]")
-//                     } else {
-//                         // mutation.target.classList.remove("transform-[105]")
-//                     }
-//                 }
-//             }
-//         });
-
-//         const config = { attributes: true, attributeFilter: ['id'] };
-//         observer.observe(IndexFrame, config);
-//     })
-
-// }
 
 outofframediv.style.left = "309%"
 farleftdiv.style.left = "-206%"
@@ -173,34 +152,6 @@ const rightbuttonfunction = function() {
     }, 200);
 
 }
-
-// buttonleft.onclick = leftbuttonfunction
-// buttonright.onclick = rightbuttonfunction
-
-// let startX, startY, endX, endY;
-
-// carouseldiv.addEventListener('touchstart', function(event) {
-//     startX = event.touches[0].clientX;
-//     startY = event.touches[0].clientY;
-// });
-
-// carouseldiv.addEventListener('touchmove', function(event) {
-//     endX = event.touches[0].clientX;
-//     endY = event.touches[0].clientY;
-// });
-
-// carouseldiv.addEventListener('touchend', function(event) {
-//     const deltaX = endX - startX;
-//     const deltaY = endY - startY;
-
-//     if (Math.abs(deltaX) > Math.abs(deltaY)) {
-//         if (deltaX > 0) {
-//             leftbuttonfunction()
-//         } else {
-//             rightbuttonfunction()
-//         }
-//     } 
-// })
 
 const slidermenu = document.getElementById("slidermenu")
 const blackoverlay = document.getElementById("blackoverlay")

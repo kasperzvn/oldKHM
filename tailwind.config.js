@@ -13,7 +13,7 @@ module.exports = {
         5.5: "5.5px",
       },
       fontFamily: {
-        viafont: ["ViaFont", "sans-serif"],
+        // viafont: ["ViaFont", "sans-serif"],
         syne: ["Syne", ...defaultTheme.fontFamily.sans],
         anek: ["Anek Latin", ...defaultTheme.fontFamily.sans],
         playfair: ["Playfair Display", ...defaultTheme.fontFamily.sans],
