@@ -1,4 +1,3 @@
-
 const carouseldiv = document.getElementById('carousel')
 const buttonleft = document.getElementById('carousel_left')
 const buttonright = document.getElementById('carousel_right')
